@@ -7,8 +7,8 @@
 
   <style>
     :root {
-      --primary: #0fb9b1;   /* Aqua */
-      --secondary: #2dd4bf; /* Teal */
+      --primary: #0fb9b1;
+      --secondary: #2dd4bf;
       --bg: #f0fdfa;
       --card: #ffffff;
       --text: #0f172a;
@@ -46,9 +46,31 @@
       font-size: 0.95rem;
     }
 
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      background: #ffffff;
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .nav a.active {
+      color: var(--text);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+    }
+
     main {
       max-width: 900px;
-      margin: -36px auto 40px;
+      margin: 24px auto 40px;
       padding: 0 16px;
     }
 
@@ -61,10 +83,7 @@
       border: 1px solid var(--border);
     }
 
-    h2 {
-      margin-top: 0;
-      font-size: 1.3rem;
-    }
+    h2 { margin-top: 0; }
 
     p, li {
       color: var(--muted);
@@ -72,17 +91,6 @@
     }
 
     ul { padding-left: 20px; }
-
-    .badge {
-      display: inline-block;
-      background: rgba(15,185,177,0.15);
-      color: #0f766e;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
 
     footer {
       text-align: center;
@@ -102,59 +110,50 @@
   <p>Aqua Flow · Last updated 2025</p>
 </header>
 
+<nav class="nav">
+  <a href="privacy.html" class="active">Privacy Policy</a>
+  <a href="terms.html">Terms & Conditions</a>
+</nav>
+
 <main>
 
   <div class="card">
-    <span class="badge">Overview</span>
     <h2>Introduction</h2>
     <p>
       Aqua Flow is a hydration reminder and water tracking application.
-      We respect your privacy and keep all data on your device.
+      We respect your privacy and do not collect personal data.
     </p>
   </div>
 
   <div class="card">
-    <span class="badge">Data</span>
-    <h2>Information We Collect</h2>
+    <h2>Data We Store</h2>
     <ul>
-      <li>No personal identity data is collected</li>
-      <li>Water intake & goals stored locally</li>
-      <li>Reminder preferences stored locally</li>
+      <li>Water intake history</li>
+      <li>Daily hydration goals</li>
+      <li>Reminder preferences</li>
+      <li>App settings</li>
     </ul>
+    <p>All data is stored locally on your device.</p>
   </div>
 
   <div class="card">
-    <span class="badge">Permissions</span>
-    <h2>Location & Notifications</h2>
+    <h2>Location Permission</h2>
     <p>
-      Location is optional and used only for weather-based hydration insights.
-      Notifications are local and generated on-device.
+      Location access is optional and used only for weather-based hydration
+      insights. Location data is not stored or shared.
     </p>
   </div>
 
   <div class="card">
-    <span class="badge">Export</span>
+    <h2>Notifications</h2>
+    <p>
+      Aqua Flow uses local notifications for 2-hour, daily, and custom
+      hydration reminders.
+    </p>
+  </div>
+
+  <div class="card">
     <h2>CSV & PDF Export</h2>
     <p>
-      Reports are generated locally and shared only when you choose.
-    </p>
-  </div>
-
-  <div class="card">
-    <span class="badge">Contact</span>
-    <h2>Contact Us</h2>
-    <p>
-      📧 sensoralabs@gmail.com<br>
-      🏢 Sensora Labs, India
-    </p>
-  </div>
-
-</main>
-
-<footer>
-  © 2025 <strong>Aqua Flow</strong>. All rights reserved.
-</footer>
-
-</body>
-</html>
-
+      Users can export hydration data as CSV or PDF files.
+      Files are generated locally an
