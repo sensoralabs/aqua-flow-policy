@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaFlow - Legal & Policies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00b4d8;
+      --primary-dark: #0077b6;
+      --primary-light: #90e0ef;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --nav-bg: rgba(255, 255, 255, 0.85);
+      --shadow: 0 10px 25px -5px rgba(0, 119, 182, 0.08), 0 8px 10px -6px rgba(0, 119, 182, 0.04);
+      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(135deg, #03045e, #0077b6, #00b4d8);
+      color: white;
+      text-align: center;
+      padding: 50px 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: var(--bg);
+      border-radius: 50% 50% 0 0;
+    }
+
+    .logo {
+      font-size: 3rem;
+      margin-bottom: 8px;
+      display: inline-block;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-bottom: 6px;
+    }
+
+    .updated {
+      font-size: 0.85rem;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-wrapper {
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      padding: 0 16px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+    .nav {
+      display: flex;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      padding: 6px;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      gap: 6px;
+      max-width: 440px;
+      width: 100%;
+    }
+
+    .nav-btn {
+      flex: 1;
+      text-align: center;
+      padding: 10px 18px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: none;
+      background: transparent;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .nav-btn:hover {
+      color: var(--primary-dark);
+    }
+
+    .nav-btn.active {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 119, 182, 0.25);
+    }
+
+    main {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      flex: 1;
+    }
+
+    .tab-content {
+      display: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+
+    .card p {
+      color: #334155;
+      font-size: 0.98rem;
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card ul {
+      list-style-type: none;
+      margin-top: 10px;
+    }
+
+    .card ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 8px;
+      color: #334155;
+      font-size: 0.96rem;
+    }
+
+    .card ul li::before {
+      content: "💧";
+      position: absolute;
+      left: 0;
+      font-size: 0.85rem;
+      top: 1px;
+    }
+
+    .contact-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .contact-box a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+
+    .footer-brand {
+      margin-top: 6px;
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 35px 16px 30px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 18px 20px;
+      }
+      .nav-btn {
+        padding: 8px 12px;
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">💧</div>
+  <h1>AquaFlow</h1>
+  <div class="subtitle" id="header-subtitle">Privacy Policy</div>
+  <div class="updated" id="header-updated">Last Updated June 2026</div>
+</header>
+
+<div class="nav-wrapper">
+  <nav class="nav">
+    <button class="nav-btn active" id="btn-privacy" onclick="showTab('privacy')">
+      🛡️ Privacy Policy
+    </button>
+    <button class="nav-btn" id="btn-terms" onclick="showTab('terms')">
+      📜 Terms & Conditions
+    </button>
+  </nav>
+</div>
+
+<main>
+  <!-- PRIVACY POLICY SECTION -->
+  <section id="tab-privacy" class="tab-content active">
+    <div class="card">
+      <h2>Introduction</h2>
+      <p>AquaFlow is a privacy-focused AI hydration coach designed to help users build healthy hydration habits.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data We Store</h2>
+      <ul>
+        <li>Hydration logs and water intake history</li>
+        <li>Daily hydration goals</li>
+        <li>Reminder preferences</li>
+        <li>Name (optional)</li>
+        <li>Gender (optional)</li>
+        <li>Weight</li>
+        <li>Analytics and progress data</li>
+        <li>Achievements and milestones</li>
+        <li>App settings and preferences</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>AI Features</h2>
+      <p>AquaFlow may generate hydration insights and recommendations using data stored on your device.</p>
+      <p>These recommendations are informational only and are not medical advice.</p>
+    </div>
+
+    <div class="card">
+      <h2>No Login & No Account</h2>
+      <p>AquaFlow does not require registration, login, email address, phone number, or social accounts.</p>
+    </div>
+
+    <div class="card">
+      <h2>No Location Data</h2>
+      <p>AquaFlow does not collect, store, or process location data and does not require location permissions.</p>
+    </div>
+
+    <div class="card">
+      <h2>Notifications</h2>
+      <p>Hydration reminders are generated locally on your device.</p>
+    </div>
+
+    <div class="card">
+      <h2>CSV & PDF Export</h2>
+      <p>Exported reports are generated locally on your device and are never uploaded to any server.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data Sharing</h2>
+      <p>AquaFlow does not sell, share, rent, or transfer user data to third parties.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data Storage</h2>
+      <p>All hydration data, analytics, profile information, and settings remain stored locally on your device.</p>
+    </div>
+
+    <div class="card">
+      <h2>Children's Privacy</h2>
+      <p>AquaFlow does not knowingly collect personal information from children.</p>
+    </div>
+
+    <div class="card">
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        📧 Email: <a href="mailto:sensoralabs@gmail.com">sensoralabs@gmail.com</a><br>
+        🏢 Company: Sensora Labs, India
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMS & CONDITIONS SECTION -->
+  <section id="tab-terms" class="tab-content">
+    <div class="card">
+      <h2>Acceptance of Terms</h2>
+      <p>By using AquaFlow, you agree to these Terms & Conditions.</p>
+    </div>
+
+    <div class="card">
+      <h2>App Purpose</h2>
+      <p>AquaFlow is an AI-powered hydration tracking and coaching application.</p>
+      <ul>
+        <li>Track water intake</li>
+        <li>Monitor hydration goals</li>
+        <li>View analytics and growth</li>
+        <li>Receive AI insights</li>
+        <li>Export hydration reports</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>AI Coach & Recommendations</h2>
+      <p>AquaFlow may provide AI-generated hydration recommendations and behavioral insights.</p>
+      <p>These recommendations are informational only and should not be considered medical advice.</p>
+    </div>
+
+    <div class="card">
+      <h2>Health Disclaimer</h2>
+      <p>AquaFlow is not a medical device and does not diagnose, treat, cure, or prevent disease.</p>
+    </div>
+
+    <div class="card">
+      <h2>User Profile Information</h2>
+      <p>Users may provide optional profile information such as name, gender, weight, and hydration goals.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data Storage</h2>
+      <p>All data is stored locally on the user's device.</p>
+      <p>AquaFlow cannot guarantee recovery of data after device failure, reset, or deletion.</p>
+    </div>
+
+    <div class="card">
+      <h2>CSV & PDF Reports</h2>
+      <p>Users are responsible for securing exported reports generated by the application.</p>
+    </div>
+
+    <div class="card">
+      <h2>Acceptable Use</h2>
+      <ul>
+        <li>Use AquaFlow lawfully.</li>
+        <li>Do not misuse or reverse engineer the application.</li>
+        <li>Do not interfere with normal application functionality.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Limitation of Liability</h2>
+      <p>Sensora Labs and AquaFlow shall not be liable for damages arising from use of the application.</p>
+    </div>
+
+    <div class="card">
+      <h2>Changes to Terms</h2>
+      <p>These Terms & Conditions may be updated periodically.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        📧 Email: <a href="mailto:sensoralabs@gmail.com">sensoralabs@gmail.com</a><br>
+        🏢 Company: Sensora Labs, India
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 AquaFlow. All Rights Reserved.
+  <div class="footer-brand">Made with ❤️ by Sensora Labs</div>
+</footer>
+
+<script>
+  function showTab(tabName) {
+    const privacyTab = document.getElementById('tab-privacy');
+    const termsTab = document.getElementById('tab-terms');
+    const privacyBtn = document.getElementById('btn-privacy');
+    const termsBtn = document.getElementById('btn-terms');
+    const subtitle = document.getElementById('header-subtitle');
+    const updated = document.getElementById('header-updated');
+
+    if (tabName === 'privacy') {
+      privacyTab.classList.add('active');
+      termsTab.classList.remove('active');
+      privacyBtn.classList.add('active');
+      termsBtn.classList.remove('active');
+      subtitle.innerText = "Privacy Policy";
+      updated.innerText = "Last Updated June 2026";
+      window.location.hash = "privacy";
+    } else {
+      termsTab.classList.add('active');
+      privacyTab.classList.remove('active');
+      termsBtn.classList.add('active');
+      privacyBtn.classList.remove('active');
+      subtitle.innerText = "Terms & Conditions";
+      updated.innerText = "Effective June 2026";
+      window.location.hash = "terms";
+    }
+  }
+
+  // URL hash check (#terms ya #privacy)
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash === '#terms') {
+      showTab('terms');
+    } else {
+      showTab('privacy');
+    }
+  });
+</script>
+
+</body>
+</html>
